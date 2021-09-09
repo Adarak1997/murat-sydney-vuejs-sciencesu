@@ -1,28 +1,48 @@
 <template>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sciences-U Data Company</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/shop-item.css" rel="stylesheet">
+
+</head>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <!-- Navbar -->
+    <NavBar />
+
+    <!-- contenu principal -->
+    <router-view/>
+
+    <!-- Footer -->
+    <Footer />
   </div>
+
+  </html>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  props: {},
+  components:{
+      NavBar,
+      Footer
   }
 }
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+</script>
